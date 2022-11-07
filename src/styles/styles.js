@@ -1,0 +1,7 @@
+import './components/_navbar.css'
+import './_setting.css'
+import './pages/_competence.css'
+import './pages/_notpage.css'
+import './pages/_portfolio.css'
+import './pages/_home.css'
+import './pages/_contact.css'

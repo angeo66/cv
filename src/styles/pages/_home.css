@@ -1,0 +1,77 @@
+.home .homeContent {
+    background: linear-gradient(115deg, #2a1d52 50%,transparent 100%);
+    min-height: 95vh;
+    width: 100%;
+    min-height: 500px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+.home .homeContent::after{
+  content: '';
+  position:absolute;
+  height: 100%;
+  background: url('../../medias/ben-kolde-FaPxZ88yZrw-unsplash.jpg') center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: inherit;
+  filter: brightness(30%);
+  z-index: -1;
+}
+.home .homeContent .content{
+    top: 20%;
+    position:absolute;
+    left: 13%;
+    font-family: cursive;
+}
+.home .homeContent h1{
+   font-size: 5rem;
+   font-family: sans-serif;
+   text-transform: uppercase;
+   text-shadow: 3px 6px 2px black;
+   color: rgb(99, 164, 233);
+}
+.home .homeContent h2{
+    font-size: 2.5rem;
+    padding: 1.5rem 0 7rem;
+    color: #6C77F4;
+    text-shadow: 1px 4px 1px black;
+ }
+
+ .home .homeContent .pdf a{
+   font-size: 1.5rem;
+   background: #36D0EA;
+   padding: 1rem 2rem;
+   border-radius: 25px;
+   box-shadow: 0 5px 1px black;
+   transition: 0.2 ease;
+ }
+ .home .homeContent .pdf a:hover{
+   background-color: #4FEDD2;
+  }
+
+  @media screen and (max-width: 850px) {
+    .homeContent{
+        margin: 0 !important;
+    }
+    .home .homeContent .pdf a{
+      font-size: 14px !important;
+    }
+    .home .homeContent h2{
+      font-size: 22px !important;
+    }
+   
+  }
+  @media screen and (max-width: 580px) {
+    .homeContent::after{
+        background: url('../../medias/ben-kolde-FaPxZ88yZrw-unsplash.jpg') 60% 50% !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+    .homeContent h1{
+       font-size: 3rem !important;
+    }
+    .homeContent h1{
+        font-size: 1.8rem !important;
+     }
+  }

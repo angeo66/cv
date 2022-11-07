@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 1rem auto;
+    max-width: 1200px;
+    font-family: cursive;
+    color: black;
+}
+button{
+    cursor: pointer;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+a:visited{
+    color: black;
+}
+.home, .competence, .portfolio, .contact{
+    display: flex;
+} 
+
+.homeContent, .competenceContent, .portfolioContant, .contactContent{
+    margin-left: .4rem;
+}
+@media screen  and (max-width: 850px){
+    .home, .competence, .portfolio, .contact{
+        display: block !important; 
+    } 
+    .homeContent, .competenceContent, .portfolioContant, .contactContent{
+        margin-left: 0 !important;
+    }        
+}
+
+

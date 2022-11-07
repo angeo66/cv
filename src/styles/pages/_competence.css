@@ -1,0 +1,249 @@
+.competence .competenceContent{
+    min-height: 95vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 38% 1fr 1fr;
+    grid-auto-rows: 70% 30%;
+    grid-template-areas: 
+        "L E E" 
+        "O O H";
+}
+.competence .competenceContent .languagesFramworks,
+.competence .competenceContent .experience,
+.competence .competenceContent .autresCompetences,
+.competence .competenceContent .hobbies{
+    background: #6C77F4;
+    border-radius: 25px;
+    padding: .8rem;
+}
+.competence .competenceContent h3{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #36D0EA;
+}
+.competence .competenceContent .languagesFramworks{
+    grid-area: L;
+    margin-bottom: .5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr 1fr;
+    grid-template-areas: 
+        "L" 
+        "F";
+}
+.competence .competenceContent .languagesFramworks .languagesDisplay{
+     grid-area: L;
+     
+}
+.competence .competenceContent .languagesFramworks .framworksDisplay{
+    grid-area: F;   
+}
+.competence .competenceContent .languagesFramworks .framworksDisplay h3{
+    margin-top: 37px; 
+}
+
+.competence .competenceContent .languagesFramworks h3{
+    margin-bottom: 0.3rem;
+}
+.competence .competenceContent .languagesFramworks .years{
+    display: flex;
+    font-size: .64rem;
+    justify-content: space-between;
+    color: white;
+}
+.competence .competenceContent .languagesFramworks .years span{
+    width: 36%;
+}
+.competence .competenceContent .languagesFramworks .years span:nth-child(2){
+    text-align: center;
+    width: 20%;
+}
+.competence .competenceContent .languagesFramworks .years span:nth-child(3){
+    text-align: right;
+    width: 44%;
+}
+.competence .competenceContent .languagesFramworks .years span:nth-child(2)::before,
+.competence .competenceContent .languagesFramworks .years span:nth-child(3)::before{
+    content: "";
+    background-color: rgba(180, 179, 179, 0.5);
+    position: absolute;
+    height: 146px;
+    width: 1px;
+    transform: translate(9px 19px);
+}
+.competence .languagesList{
+   /* padding-top: .5rem;*/
+}
+.competence .languagesList li{
+   color: #2a1d52;
+}
+.competence .languagesList .progressBar{
+    height: .4rem;
+    position: relative;
+    border-radius: 50px;
+    background: transparent;
+    margin-top: 0.2rem;
+ }
+.competence .languagesList .progressBar::after{
+    content: '';
+    position:absolute;
+    background-color: #36D0EA;
+    border-radius: 50px;
+    height: .4rem;
+    width: 0; 
+    animation: line 3s ease-out forwards;
+ }
+@keyframes line {
+        to {
+            width: 100%;
+        }
+}
+.competence .competenceContent .experience{
+    grid-area: E;
+    margin: 0 0 .5rem .5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr 1fr;
+    grid-template-areas: "1" "2" "3";
+}
+.competence .competenceContent .experience h3{
+   grid-area: 1;
+}
+.competence .competenceContent .experience h4{
+    font-size: 1.1rem;
+    color: #36D0EA;
+ }
+ .competence .competenceContent .experience h5{
+   padding: 0.5rem 0 0.5rem 1rem;
+   color: #6C77F4;
+ }
+ .competence .competenceContent .experience p{
+   padding: 0 1rem;
+   text-align: justify;
+ }
+ .competence .competenceContent .experience .exp-1{
+    grid-area: 2;
+ }
+ .competence .competenceContent .experience .exp-2{
+    grid-area: 3;
+ }
+ .competence .competenceContent .autresCompetences{
+    margin-right: 0.5rem;
+    grid-area: O;
+ }
+ .competence .competenceContent .autresCompetences .list{
+    display: flex;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.competence .competenceContent .autresCompetences .list ul{
+   height: 80%;
+   display: grid;
+}
+.competence .competenceContent .autresCompetences .list ul i{
+    color: #36D0EA;
+ }
+ .competence .competenceContent .hobbies{
+    padding-left: 1.5rem;
+    grid-area: H;
+ }
+ .competence .competenceContent .hobbies ul{
+    height: 80%;
+    display: grid;
+ }
+ .competence .competenceContent .hobbies ul  li i{
+    position:absolute;
+    color: #36D0EA;    
+ }
+ .competence .competenceContent .hobbies ul li span{
+    position:absolute;
+    transform: translateX(2.2rem);
+ }
+ @media screen and (max-width: 950px) {
+    .competence .competenceContent h3{
+        font-size: 1.2rem !important;
+    }
+    .competence .languagesList{
+        padding-top: .0rem !important;
+    }
+    .competence .competenceContent p{
+        font-size: .8rem;
+    }
+    .competence .competenceContent .autresCompetences,
+    .competence .competenceContent .hobbies{
+        font-size: .8rem;
+    }
+    .competence .competenceContent .languagesFramworks .framworksDisplay h3{
+        margin-top: 12px; 
+    }
+   
+ }
+ @media screen and (max-width: 850px) {
+    .competence .competenceContent h3{
+        font-size: .9rem !important;
+    }
+    .competence .competenceContent .experience h4{
+        font-size: .9rem !important;
+    }
+    .competence .competenceContent .experience h5{
+        font-size: .6rem !important;
+        padding: .2rem 1rem !important;
+    }
+ }
+
+ @media screen and (max-width: 500px) {
+    .competence .competenceContent{
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 1fr 1fr 180px 180px !important;
+        grid-template-areas: "1" "2" "3" "4" !important;
+    }
+    .competence .autresCompetences .languages{
+        grid-area: 1 !important;
+        margin-left: 0 !important;
+    }
+    .competence .competenceContent .experience{
+        grid-area: 2 !important;
+        margin-left: 0 !important;
+    }
+    .competence .competenceContent .autresCompetences{
+        grid-area: 3 !important;
+        margin-left: 0 !important;
+    }
+    .competence .competenceContent .hobbies{
+        grid-area: 4 !important;
+        margin-left: 0 !important;
+        margin-top: .5rem !important;
+    }
+    
+ }
+ @media screen and (max-width: 1174px) and (min-width: 851px){
+    .competence .competenceContent h3{
+        font-size: .8rem !important;
+    }
+    .competence .competenceContent p{
+        font-size: 0.8rem !important;
+    }
+ }
+ @media screen and (max-width: 814px) and (min-width: 501px){
+    .competence .competenceContent h3{
+        font-size: .8rem !important;
+    }
+    .competence .competenceContent p{
+        font-size: 0.8rem !important;
+    }
+    .competence  .competenceContent .languagesList{
+        height: 30px !important;
+    }
+ }
+ @media screen and (min-width: 950px) and (max-width: 1085px) {
+    .competence .competenceContent .languagesFramworks .framworksDisplay h3{
+        margin-top: 25px !important; 
+    }
+ }

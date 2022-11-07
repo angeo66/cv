@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Competence from './pages/Competence';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import NotPage from './pages/NotPage';
+import Portfolio from './pages/Portfolio';
+import { BrowserRouter, Route , Routes  } from 'react-router-dom'
+import NavBar from './components/NavBar';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Je vous salut mes amis. 
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          By Angeo
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<NavBar />} />
+                    <Route index element={<Home />}/>
+                    <Route path='/competence' element={<Competence />} />
+                    <Route path='/contact' element={<Contact />} />
+                    <Route path='/portfolio' element={<Portfolio />} />
+                    <Route path='*' element={<NotPage />} />
+                </Routes>
+            </BrowserRouter>
+        </>
+    )
 }
 
 export default App;
+

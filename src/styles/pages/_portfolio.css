@@ -1,0 +1,276 @@
+.portfolio .portfolioContent {
+  width: 100%;
+  display: grid;
+  min-height: 95vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    "1"
+    "2";
+}
+
+.portfolio .radioDisplay {
+  grid-area: 1;
+  border-radius: 25px;
+  display: flex;
+  width: 100%;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  background: #2a1d52;
+  user-select: none;
+  box-shadow: 0 5px 1px black;
+}
+
+.portfolio .radioDisplay li {
+  color: #36D0EA;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 0 1rem;
+  flex: 1;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
+
+.portfolio .radioDisplay li input[type="radio"] {
+  visibility: hidden;
+  position: relative;
+}
+
+.portfolio .radioDisplay li input[type="radio"]::before {
+  content: '';
+  visibility: visible;
+  position: absolute;
+  top: -4px;
+  left: -12px;
+  height: .9rem;
+  width: .9rem;
+  border-radius: 50%;
+  border: 2px solid #4FEDD2;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.portfolio .radioDisplay li input[type="radio"]::after {
+  content: '';
+  visibility: visible;
+  position: absolute;
+  top: -4px;
+  left: -12px;
+  height: .9rem;
+  width: .9rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  background: #4FEDD2;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+.portfolio .radioDisplay li input:checked::after {
+  transform: scale(1.17) translate(-25%, -25%);
+  top: 2px;
+  left: -6px;
+
+}
+
+.portfolio .radioDisplay li input:checked+label {
+  color: #4FEDD2;
+
+}
+
+.portfolio .radioDisplay li label {
+  cursor: pointer;
+}
+
+.portfolio .projects {
+  grid-area: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.portfolio .projects .project {
+  background: #6C77F4;
+  border-radius: 25px;
+  margin: 0.5rem 0 0 0;
+  text-align: center;
+  width: 32%;
+  max-height: 50%;
+  padding: .3rem;
+  box-shadow: 0 5px 1px black;
+  display: grid;
+  grid-template-rows: 15% 15% 55% 15%;
+  grid-template-areas:
+    "1"
+    "2"
+    "3"
+    "4";
+}
+
+.portfolio .projects .project .icons {
+  grid-area: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio .projects .project .icons i {
+  font-size: 1.4rem;
+  padding: 0 .35rem;
+  color: #2a1d52;
+  text-shadow: 0 0px 1px #6C77F4;
+}
+
+.portfolio .projects .project h3 {
+  grid-area: 2;
+  font-family: sans-serif;
+  font-size: 1.65rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: left;
+}
+
+.portfolio .projects .project img {
+  grid-area: 3;
+  object-fit: cover;
+  margin: 0 auto;
+  width: 100%;
+  height: 95%;
+  box-shadow: 0 2px 6px #333;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.portfolio .projects .project .infos {
+  grid-area: 4;
+  color: #4FEDD2;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s;
+}
+
+.portfolio .projects .project .infos:hover {
+  transform: scale(1.1);
+}
+
+.portfolio .projects .project .showInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.507);
+  animation: popup .3s ease forwards;
+  transform-origin: center;
+}
+
+.portfolio .projects .project .showInfo .infosContent {
+  position: relative;
+  top: 25%;
+  width: 600px;
+  margin: 0 auto;
+  color: #36D0EA;
+  background: #2a1d52;
+  border-radius: 25px;
+  padding: 2rem;
+  box-shadow: 0 10px 10px #333;
+  animation: popup .6s ease forwards;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+@keyframes popup {
+  to {
+    transform: scale(1);
+  }
+}
+
+.portfolio .projects .project .showInfo .infosContent .head {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+
+.portfolio .projects .project .showInfo .infosContent .head h2 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.portfolio .projects .project .showInfo .infosContent .button {
+  cursor: pointer;
+  color: #2a1d52;
+  background: #36D0EA;
+  border-radius: 25px;
+  padding: 1rem;
+  transition: .2s;
+}
+
+.portfolio .projects .project .showInfo .infosContent .button:hover {
+  background: #4FEDD2;
+}
+
+.portfolio .projects .project .showInfo .infosContent .text {
+  text-align: justify;
+  padding-bottom: 1rem;
+}
+
+.portfolio .projects .project .showInfo .infosContent .return {
+  margin: 1rem auto;
+  width: 200px;
+}
+
+@media (max-width: 650px) and (min-width: 521px) {
+  .portfolio .portfolioContent .projects .project {
+    width: 49% !important;
+  }
+
+  .portfolio .portfolioContent .projects .project i {
+    font-size: 1rem;
+
+  }
+
+  .portfolio .portfolioContent .projects .project .showInfo .infosContent {
+    width: 100% !important;
+
+  }
+}
+
+@media (max-width: 520px) {
+  .portfolio .radioDisplay {
+    display: none !important;
+  }
+
+  .portfolio .portfolioContent {
+    grid-template-rows: 1fr !important;
+
+  }
+
+  .portfolio .portfolioContent .projects .project {
+    grid-template-rows: 30px 40px 80px 40px !important;
+    width: 98% !important;
+
+  }
+
+  .portfolio .portfolioContent .projects .project img {
+    height: 100% !important;
+    width: 100% !important;
+    /* object-fit: cover !important; */
+  }
+
+  .portfolio .portfolioContent .projects .project .showInfo .infosContent {
+    width: 100% !important;
+
+  }
+
+}
