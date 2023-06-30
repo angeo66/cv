@@ -32,6 +32,12 @@ const NavBar = () => {
                         </NavLink>
                     </li>
                     <li>
+                        <NavLink to={'/outils'} className={(nav) => (nav.isActive ? "active" : "")}>
+                            <i className='fa fa-key'></i>
+                            <span>Outils</span>
+                        </NavLink>
+                    </li>
+                    <li>
                         <NavLink to={'/contact'} className={(nav) => (nav.isActive ? "active" : "")}>
                             <i className='fa fa-address-book'></i>
                             <span>Contact</span>

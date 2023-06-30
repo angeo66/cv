@@ -1,0 +1,40 @@
+{
+  "outils": [
+    {
+      "nom": "Html-Css",
+      "image": "./medias/outils/html-css.png"
+    },
+    {
+      "nom": "Node js",
+      "image": "./medias/outils/nodejs.png"
+    },
+    {
+      "nom": "Php",
+      "image": "./medias/outils/php.png"
+    },
+    {
+      "nom": "MongoDB",
+      "image": "./medias/outils/mongodb.png"
+    },
+     {
+      "nom": "Bootstrap",
+      "image": "./medias/outils/bootstrap.png"
+    },
+     {
+      "nom": "React Js",
+      "image": "./medias/outils/logo192.png"
+    },
+     {
+      "nom": "MySql",
+      "image": "./medias/outils/mysql.png"
+    },
+     {
+      "nom": "TailwindCss",
+      "image": "./medias/outils/tailwindcss.png"
+    },
+    {
+      "nom": "JavaScript",
+      "image": "./medias/outils/js.png"
+    }
+  ]
+}
